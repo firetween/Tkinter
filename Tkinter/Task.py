@@ -5,6 +5,11 @@ aken=Tk()
 aken.title('Квадратные уравнения')
 aken.geometry('600x200')
 
+def text_to_lbl(event):#ent_number
+    text=ent1.get()
+    lbl5.configure(text=text)
+    ent1.delete(0,END)
+
 lbl=Label(aken,text='Решение квадратного уравнения',font='Arial 20',bg='lightblue',fg='green')
 ent1=Entry(aken,fg='green',width=5,font='Arial 14')
 lbl2=Label(aken,text=' x**2+ ',font='Arial 20',fg='green')
@@ -16,7 +21,7 @@ ent3=Entry(aken,fg='green',width=5,font='Arial 14')
 btn=Button(aken,text='Решить',font='Arial 14',bg='darkgreen',width=10,height=3)
 lbl5=Label(aken,text='Решение',width=50,font='Arial 20',bg='yellow')
 
-ent1.bind('<Return>',text_to_lbl(ent1,lbl))
+ent1.bind('<Return>',text_to_lbl)
 
 lbl.pack()
 ent1.pack(side=LEFT)
