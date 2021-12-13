@@ -31,10 +31,18 @@ def uus_aken(ind:int):
     uusAken=Toplevel()
     tabs=ttk.Notebook(uusAken)
     texts=['1.png','2.png','3.png','4.png','5.png']
+    textn=texts
     tab=[]
+    cann=[]
     for i in range(len(texts)):
+        tab.append("tab"+str(i))
         tab[i]=Frame(tabs)
-        tabs.add(tab[i], text=texts[i])
+        tabs.add(tab[i],text=texts[i])#,image=img1)
+        textn[i]=PhotoImage(file=texts[i]).subsample(1)
+        cann.append("cann"+str(i))
+        cann[i]=Canvas(tab[i],height=200,width=300,bg="red")
+        cann[i].create_image(0,0,image=textn[i], anchor=NW)
+        cann[i].pack()
         #i+=1 здесь это нахрен не упало, потому что инкреминент i идет уже по ходу пробегания по списку
 
 
