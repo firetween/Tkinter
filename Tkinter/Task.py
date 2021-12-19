@@ -24,7 +24,7 @@ def uus_aken(ind:int):
     uusaken=Toplevel()
     tabs=ttk.Notebook(uusaken)
     texts=["1.png","2.png","3.png","4.png","5.png"]
-    textn=["1.png","2.png","3.png","4.png","5.png"]
+    textn=texts
     tab=[]
     cann=[]
     for i in range(len(texts)):
