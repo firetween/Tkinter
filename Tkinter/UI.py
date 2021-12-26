@@ -12,15 +12,35 @@ def klikker2(event):
     else:
         klik=0
     lbl.configure(text=klik)
+
 def text_to_lbl(event):
     text=ent.get()
-    lbl.configure(text=text)
-    ent.delete(0,END)
+    a=text
+    lbl5.configure(text=a)
+    print(a)
+    #ent.delete(0,END)
+
+def text_to_lbl2(event):
+    text=ent2.get()
+    b=text
+    lbl5.configure(text=b)
+    print(b)
+    #ent2.delete(0,END)
+
+def text_to_lbl3(event):
+    text=ent3.get()
+    c=text
+    lbl5.configure(text=c)
+    print(c)
+    #ent3.delete(0,END)
+
 def valik():
     val=str(var.get())+", " #value 1,2 või 3
     ent.insert(END,val)
 
-
+a=0
+b=0
+c=0
 
 aken=Tk() #Akna loomine
 aken.title("Window name") #Akna pealkiri
@@ -57,6 +77,9 @@ btn.pack(side=LEFT)
 lbl5.pack()
 lbl5.place(x=180,y=130)
 
+ent.bind('<Return>',text_to_lbl)
+ent2.bind('<Return>',text_to_lbl2)
+ent3.bind('<Return>',text_to_lbl3)
 
 #r1.pack(side=LEFT)
 #r2.pack(side=LEFT)
