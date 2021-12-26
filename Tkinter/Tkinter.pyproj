@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>f285bf05-53a4-4c41-90fe-04867684d178</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>UI.py</StartupFile>
+    <StartupFile>Tkinter.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
