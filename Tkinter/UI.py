@@ -1,5 +1,14 @@
 from tkinter import *
-from tkinter import ttk
+from math import *
+from Module import *
+import numpy as np 
+import matplotlib.pyplot as plt
+
+#При переходе по урл для построения графика функции броузер выдает предупреждение и блокирует вход
+#Your connection is not private
+#Attackers might be trying to steal your information from www.russianlutheran.org (for example, passwords, messages, or credit cards).
+
+#NET::ERR_CERT_DATE_INVALID
 
 def colorise(field):
     field.configure(bg='lightblue')
@@ -31,6 +40,22 @@ def solution():
             b_Field.configure(bg='red')
         elif c_Field.get()=='':
             c_Field.configure(bg='red')
+
+
+## функция
+#y = lambda x: np.sin(x)
+## создаём рисунок с координатную плоскость
+#fig = plt.subplots()
+## создаём область, в которой будет
+## - отображаться график
+#x = np.linspace(-3, 3,100)
+## значения x, которые будут отображены
+## количество элементов в созданном массиве
+## - качество прорисовки графика 
+## рисуем график
+#plt.plot(x, y(x))
+## показываем график
+#plt.show()
 
 aken=Tk() #Создание окна
 aken.title('Quadratic equation') #Заголовок окна
